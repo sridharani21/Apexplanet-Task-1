@@ -6,12 +6,21 @@ body {
   
 }
 
-h1 {
+.hero h1 {
+  font-size: 4rem; /* make it big */
+  font-weight: 900; /* extra bold */
   text-align: center;
-  font-size: 2.75rem;
-  margin-top: 20px;
-  color: white;
+
+  /* Gradient text */
+  background: linear-gradient(90deg, #5e829eff, #ffffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 10px;
+animation: gradientShift 8s ease-in-out infinite;
 }
+
 
 h3 {
   text-align: center;
@@ -33,6 +42,17 @@ img {
   width: 450px;
   height: 450px;
   object-fit: cover;
+}
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .content {
@@ -122,6 +142,57 @@ p {
 #toast.show {
   visibility: visible;
   animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+.hero {
+  background-image: url("./images/hero.jpg"); /* replace with your image path */
+  background-size: cover;   /* makes it cover the whole div */
+  background-position: center;
+  height: 90vh; /* adjust height as you like */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center */
+  align-items: center;     /* horizontally center */
+  text-align: center;
+  color: white; /* makes text visible on bg */
+  padding: 20px;
+}
+
+
+
+.hero h3 {
+  font-size: 1.5rem;
+  margin-top: 20px; /* moves it down */
+}
+.hero a {
+    text-decoration: none;
+    color: white;
+    
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: #7eafbfff;
+    font-size: 1.25rem;
+    transition: background 0.3s ease;
+}
+
+/* Responsive text sizes */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero h3 {
+    font-size: 1rem;
+  }
 }
 
 @keyframes fadein {
