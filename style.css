@@ -1,0 +1,130 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000000ff;
+  
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.75rem;
+  margin-top: 20px;
+  color: white;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.main {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin: 40px 100px;
+}
+
+img {
+  border-radius: 15px;
+  box-shadow: 8px 8px 15px rgba(0,0,0,0.3);
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+  color: white;
+  text-decoration: underline solid ;
+  
+
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background: #90e900ff;
+  color: black;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  transition: background 0.3s ease;
+  width: 150px;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: #98cd8dff;
+}
+
+.btn.secondary {
+  background: #e1ff00ff;
+}
+
+.btn.secondary:hover {
+  background: #d2d067ff;
+}
+
+/* Hidden galleries */
+.gallery {
+  display: none;
+  margin-top: 15px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.gallery img {
+  width: 250px;
+  height: 180px;
+  border-radius: 10px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+#toast {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+  padding: 14px;
+  position: fixed;
+  z-index: 1000;
+  left: 50%;
+  bottom: 30px;
+  font-size: 16px;
+}
+
+#toast.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+  from { bottom: 0; opacity: 0; }
+  to { bottom: 30px; opacity: 1; }
+}
+
+@keyframes fadeout {
+  from { bottom: 30px; opacity: 1; }
+  to { bottom: 0; opacity: 0; }
+}
